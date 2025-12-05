@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- ============================================= -->
+    <!--  META & SEO                                   -->
+    <!-- ============================================= -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#2563eb">
+    
+    <title>Praveen Singh - Professional Video Editor | Reels, Shorts & Wedding Films</title>
+    <meta name="description" content="Professional Video Editor specializing in Instagram Reels, YouTube Shorts, Wedding Films, Podcasts, and Commercial Videos. 24hr delivery • 100+ projects.">
+    <meta name="keywords" content="video editor, video editing, reels editor, wedding video editor, podcast editor, davinci resolve, premiere pro">
+    <meta name="author" content="Praveen Singh">
+    
+    <!-- ============================================= -->
+    <!--  FAVICON & APPLE TOUCH ICON                   -->
+    <!-- ============================================= -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/logo.PNG">
+    <link rel="manifest" href="/manifest.json">
+
+    <!-- ============================================= -->
+    <!--  PRELOAD CRITICAL RESOURCES                   -->
+    <!-- ============================================= -->
+    <link rel="preload" href="/assets/logo.PNG" as="image">
+    <link rel="preload" href="/assets/profile1.jpeg" as="image">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="https://player.vimeo.com">
+
+    <!-- ============================================= -->
+    <!--  OPEN GRAPH / SOCIAL MEDIA                    -->
+    <!-- ============================================= -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Praveen Singh - Professional Video Editor">
+    <meta property="og:description" content="Transforming raw footage into viral reels & cinematic stories. Available for freelance.">
+    <meta property="og:image" content="https://praveensinghlko.github.io/assets/profile1.jpeg">
+    <meta property="og:url" content="https://praveensinghlko.github.io">
+    <meta property="og:site_name" content="Praveen Singh Portfolio">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Praveen Singh - Professional Video Editor">
+    <meta name="twitter:description" content="Reels • Commercials • Wedding Films • Podcasts">
+    <meta name="twitter:image" content="https://praveensinghlko.github.io/assets/profile1.jpeg">
+    <meta name="twitter:creator" content="@praveensinghaws">
+
+    <!-- ============================================= -->
+    <!--  CANONICAL URL                                -->
+    <!-- ============================================= -->
+    <link rel="canonical" href="https://praveensinghlko.github.io">
+
+    <!-- ============================================= -->
+    <!--  STRUCTURED DATA (JSON-LD)                    -->
+    <!-- ============================================= -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Praveen Singh",
+        "jobTitle": "Professional Video Editor",
+        "url": "https://praveensinghlko.github.io",
+        "image": "https://praveensinghlko.github.io/assets/profile1.jpeg",
+        "sameAs": [
+            "https://instagram.com/praveensinghaws",
+            "https://t.me/praveensinghaws"
+        ],
+        "email": "mailto:praveensinghaws@gmail.com",
+        "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "IN"
+        },
+        "knowsAbout": ["Video Editing", "DaVinci Resolve", "Adobe Premiere Pro", "Color Grading", "Motion Graphics"]
+    }
+    </script>
+
+    <!-- ============================================= -->
+    <!--  FONTS & ICONS                                -->
+    <!-- ============================================= -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- ============================================= -->
+    <!--  MAIN STYLESHEET                              -->
+    <!-- ============================================= -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- ============================================= -->
+    <!--  CRITICAL CSS (Above the fold)                -->
+    <!-- ============================================= -->
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: #fff; color: #1e293b; overflow-x: hidden; }
+        
+        .loader {
+            position: fixed;
+            inset: 0;
+            background: #f8fafc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: opacity 0.4s ease, visibility 0.4s ease;
+        }
+        .loader.hide {
+            opacity: 0;
+            visibility: hidden;
+        }
+        .spinner {
+            width: 48px;
+            height: 48px;
+            border: 4px solid #e2e8f0;
+            border-top-color: #2563eb;
+            border-radius: 50%;
+            animation: s 0.8s linear infinite;
+        }
+        @keyframes s { to { transform: rotate(360deg); } }
+    </style>
+
+    <!-- ============================================= -->
+    <!--  GOOGLE ANALYTICS                             -->
+    <!-- ============================================= -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3R5DC4MDE2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-3R5DC4MDE2');
+    </script>
+</head>
+
+<body>
+    <!-- ============================================= -->
+    <!--  PAGE LOADER                                  -->
+    <!-- ============================================= -->
+    <div class="loader" id="loader">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- ============================================= -->
+    <!--  HEADER & NAVIGATION                          -->
+    <!-- ============================================= -->
+    <header class="header" id="header">
+        <div class="container">
+            <a href="#home" class="logo">
+                <img src="/assets/logo.PNG" alt="Praveen Singh Logo" class="logo-img">
+                <div class="logo-text">
+                    <span class="logo-name">Praveen<span>Singh</span></span>
+                    <span class="logo-tagline">Video Editor</span>
+                </div>
+            </a>
+
+            <nav class="nav" id="nav">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#showreel" class="nav-link">Showreel</a>
+                <a href="#work" class="nav-link">Work</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+
+            <button class="menu-btn" id="menuBtn" aria-label="Menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+
+<!-- HEADER mein nav ke baad, menu-btn se pehle add karo -->
+<header class="header" id="header">
+    <div class="container">
+        <a href="#home" class="logo">
+            <img src="/assets/logo.PNG" alt="Praveen Singh Logo" class="logo-img">
+            <div class="logo-text">
+                <span class="logo-name">Praveen<span>Singh</span></span>
+                <span class="logo-tagline">Video Editor</span>
+            </div>
+        </a>
+
+        <nav class="nav" id="nav">
+            <a href="#home" class="nav-link active">Home</a>
+            <a href="#showreel" class="nav-link">Showreel</a>
+            <a href="#work" class="nav-link">Work</a>
+            <a href="#services" class="nav-link">Services</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+
+        <!-- DARK MODE TOGGLE - NEW -->
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle Dark Mode">
+            <i class="fas fa-moon" id="themeIcon"></i>
+        </button>
+
+        <button class="menu-btn" id="menuBtn" aria-label="Menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</header>
+
+    <!-- ============================================= -->
+    <!--  HERO SECTION                                 -->
+    <!-- ============================================= -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-box">
+                <div class="hero-icon"><i class="fas fa-film"></i></div>
+                <p class="hero-hi animate-fade">Hello, I'm</p>
+                <h1 class="hero-name animate-fade">Praveen Singh</h1>
+                <p class="hero-title animate-fade">Professional Video Editor</p>
+                <p class="hero-desc animate-fade">I transform raw footage into engaging stories. Specializing in reels, commercials, documentaries & wedding films.</p>
+
+                <div class="hero-tags animate-fade">
+                    <span><i class="fas fa-mobile-alt"></i> Reels</span>
+                    <span><i class="fas fa-ad"></i> Ads</span>
+                    <span><i class="fas fa-podcast"></i> Podcast</span>
+                    <span><i class="fas fa-heart"></i> Wedding</span>
+                    <span><i class="fas fa-globe"></i> Documentary</span>
+                </div>
+
+                <div class="hero-stats animate-fade">
+                    <div class="stat">
+                        <strong class="stat-number" data-target="2">0</strong>
+                        <span>Years</span>
+                    </div>
+                    <div class="stat">
+                        <strong class="stat-number" data-target="100">0</strong>
+                        <span>Projects</span>
+                    </div>
+                    <div class="stat">
+                        <strong class="stat-number" data-target="24">0</strong>
+                        <span>Hr Delivery</span>
+                    </div>
+                </div>
+
+                <div class="hero-btns animate-fade">
+                    <a href="#contact" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i> 
+                        <span>Hire Me</span>
+                    </a>
+                    <a href="#work" class="btn btn-outline">
+                        <i class="fas fa-play"></i> 
+                        <span>View Work</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="hero-bg-animation"></div>
+    </section>
+
+    <!-- ============================================= -->
+    <!--  SHOWREEL SECTION                             -->
+    <!-- ============================================= -->
+<!-- SHOWREEL SECTION - Find and Replace -->
+        <section class="section" id="showreel">
+            <div class="container">
+                <div class="sec-head">
+                    <h2>My Showreel</h2>
+                    <p>Hover to play with sound <span class="mobile-only">• Tap on mobile</span></p>
+                </div>
+
+            <div class="video-wrap">
+                <div class="video-box" id="showreelBox">
+                    <iframe id="showreelFrame"
+                        src="https://player.vimeo.com/video/1119702101?h=0&badge=0&autopause=0&player_id=0&app_id=58479&background=1&muted=1&loop=1&autoplay=0&title=0&byline=0&portrait=0&quality=720p"
+                        frameborder="0" 
+                        allow="autoplay; fullscreen; picture-in-picture" 
+                        allowfullscreen 
+                        loading="lazy">
+                    </iframe>
+                    <div class="video-play" id="showreelPlay">
+                        <i class="fas fa-play"></i>
+                        <span>Click to play with sound</span>
+                    </div>
+                    <button class="video-sound" id="showreelSound" aria-label="Toggle Sound">
+                        <i class="fas fa-volume-mute"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================= -->
+    <!--  RECENT WORK - REELS SECTION                  -->
+    <!-- ============================================= -->
+<!-- WORK SECTION - Find and Replace -->
+    <section class="section section-gray" id="work">
+        <div class="container">
+            <div class="sec-head">
+                <h2>Recent Work</h2>
+                <p class="desktop-hint"><i class="fas fa-mouse"></i> Hover to play with sound</p>
+                <p class="mobile-hint"><i class="fas fa-hand-pointer"></i> Tap to play with sound</p>
+            </div>
+
+            <div class="reels-wrap">
+                <div class="reels-track" id="reelsTrack">
+                    <!-- Reel Cards -->
+                    <div class="reel-card" data-id="1119758094">
+                        <div class="reel-video">
+                            <iframe src="https://player.vimeo.com/video/1119758094?background=1&muted=1&loop=1&autoplay=0&title=0&byline=0&portrait=0&quality=720p" frameborder="0" allow="autoplay" loading="lazy"></iframe>
+                            <div class="reel-play"><i class="fas fa-play"></i></div>
+                            <div class="reel-playing"><div class="bars"><span></span><span></span><span></span></div>Playing</div>
+                        </div>
+                        <p class="reel-title">Social Media Reel</p>
+                        <p class="reel-sub">Instagram • 30s</p>
+                    </div>
+
+                    <div class="reel-card" data-id="1119802002">
+                        <div class="reel-video">
+                            <iframe src="https://player.vimeo.com/video/1119802002?background=1&muted=1&loop=1&autoplay=0&title=0&byline=0&portrait=0&quality=720p" frameborder="0" allow="autoplay" loading="lazy"></iframe>
+                            <div class="reel-play"><i class="fas fa-play"></i></div>
+                            <div class="reel-playing"><div class="bars"><span></span><span></span><span></span></div>Playing</div>
+                        </div>
+                        <p class="reel-title">Brand Campaign</p>
+                        <p class="reel-sub">Commercial • 60s</p>
+                    </div>
+
+                    <div class="reel-card" data-id="1119801356">
+                        <div class="reel-video">
+                            <iframe src="https://player.vimeo.com/video/1119801356?background=1&muted=1&loop=1&autoplay=0&title=0&byline=0&portrait=0&quality=720p" frameborder="0" allow="autoplay" loading="lazy"></iframe>
+                            <div class="reel-play"><i class="fas fa-play"></i></div>
+                            <div class="reel-playing"><div class="bars"><span></span><span></span><span></span></div>Playing</div>
+                        </div>
+                        <p class="reel-title">Travel Documentary</p>
+                        <p class="reel-sub">Documentary • 45s</p>
+                    </div>
+
+                    <div class="reel-card" data-id="1119801313">
+                        <div class="reel-video">
+                            <iframe src="https://player.vimeo.com/video/1119801313?background=1&muted=1&loop=1&autoplay=0&title=0&byline=0&portrait=0&quality=720p" frameborder="0" allow="autoplay" loading="lazy"></iframe>
+                            <div class="reel-play"><i class="fas fa-play"></i></div>
+                            <div class="reel-playing"><div class="bars"><span></span><span></span><span></span></div>Playing</div>
+                        </div>
+                        <p class="reel-title">Podcast Episode</p>
+                        <p class="reel-sub">Podcast • 30s</p>
+                    </div>
+
+                    <div class="reel-card" data-id="1130573685">
+                        <div class="reel-video">
+                            <iframe src="https://player.vimeo.com/video/1130573685?background=1&muted=1&loop=1&autoplay=0&title=0&byline=0&portrait=0&quality=720p" frameborder="0" allow="autoplay" loading="lazy"></iframe>
+                            <div class="reel-play"><i class="fas fa-play"></i></div>
+                            <div class="reel-playing"><div class="bars"><span></span><span></span><span></span></div>Playing</div>
+                        </div>
+                        <p class="reel-title">News Segment</p>
+                        <p class="reel-sub">News • 45s</p>
+                    </div>
+
+                    <div class="reel-card" data-id="1130573519">
+                        <div class="reel-video">
+                            <iframe src="https://player.vimeo.com/video/1130573519?background=1&muted=1&loop=1&autoplay=0&title=0&byline=0&portrait=0&quality=720p" frameborder="0" allow="autoplay" loading="lazy"></iframe>
+                            <div class="reel-play"><i class="fas fa-play"></i></div>
+                            <div class="reel-playing"><div class="bars"><span></span><span></span><span></span></div>Playing</div>
+                        </div>
+                        <p class="reel-title">Wedding Teaser</p>
+                        <p class="reel-sub">Wedding • 20s</p>
+                    </div>
+                </div>
+
+                <p class="swipe-hint"><i class="fas fa-hand-pointer"></i> Swipe to see more</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================= -->
+    <!--  SERVICES SECTION                             -->
+    <!-- ============================================= -->
+    <section class="section" id="services">
+        <div class="container">
+            <div class="sec-head">
+                <h2>What I Edit</h2>
+                <p>Professional editing for all content types</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>Social Media</h3>
+                    <p>Reels, Shorts, TikTok</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-bullhorn"></i>
+                    <h3>Commercials</h3>
+                    <p>Ads, Promos, Brand Videos</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-globe"></i>
+                    <h3>Documentary</h3>
+                    <p>Travel, News, Stories</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-microphone"></i>
+                    <h3>Podcast</h3>
+                    <p>Episodes, Clips, Interviews</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>Educational</h3>
+                    <p>Tutorials, Courses</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-heart"></i>
+                    <h3>Wedding</h3>
+                    <p>Highlights, Teasers</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================= -->
+    <!--  ABOUT SECTION                                -->
+    <!-- ============================================= -->
+    <section class="section section-gray" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-img">
+                    <img src="/assets/profile1.jpeg" alt="Praveen Singh - Professional Video Editor" class="profile-pic" loading="lazy">
+                </div>
+                <div class="about-text">
+                    <h2>Praveen Singh</h2>
+                    <h3>Professional Video Editor</h3>
+                    <p>With 2+ years of experience, I specialize in creating compelling visual stories. From trending reels to cinematic wedding films, I bring creativity and technical expertise to every project.</p>
+                    <p>Expert in <strong>DaVinci Resolve</strong> with skills in color grading, transitions, and audio sync. I deliver high-quality edits within 24 hours.</p>
+                    <div class="about-stats">
+                        <div>
+                            <i class="fas fa-film"></i>
+                            <strong>100+</strong>
+                            <span>Projects</span>
+                        </div>
+                        <div>
+                            <i class="fas fa-clock"></i>
+                            <strong>2+ Yrs</strong>
+                            <span>Experience</span>
+                        </div>
+                        <div>
+                            <i class="fas fa-bolt"></i>
+                            <strong>24hr</strong>
+                            <span>Delivery</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================= -->
+    <!--  CONTACT SECTION                              -->
+    <!-- ============================================= -->
+    <section class="section section-dark" id="contact">
+        <div class="container">
+            <div class="sec-head">
+                <h2>Let's Work Together</h2>
+                <p>Available for freelance & full-time opportunities</p>
+            </div>
+            <div class="contact-grid">
+                <a href="mailto:praveensinghaws@gmail.com" class="contact-card">
+                    <i class="fas fa-envelope"></i>
+                    <h4>Email</h4>
+                    <p>praveensinghaws@gmail.com</p>
+                </a>
+                <a href="https://t.me/praveensinghaws" target="_blank" rel="noopener" class="contact-card">
+                    <i class="fab fa-telegram"></i>
+                    <h4>Telegram</h4>
+                    <p>@praveensinghaws</p>
+                </a>
+                <a href="https://instagram.com/praveensinghaws" target="_blank" rel="noopener" class="contact-card">
+                    <i class="fab fa-instagram"></i>
+                    <h4>Instagram</h4>
+                    <p>@praveensinghaws</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================= -->
+    <!--  FOOTER                                       -->
+    <!-- ============================================= -->
+    <footer class="footer">
+        <p>© 2024 Praveen Singh. All rights reserved. | <a href="/sitemap.xml">Sitemap</a></p>
+    </footer>
+
+    <!-- ============================================= -->
+    <!--  BACK TO TOP BUTTON                           -->
+    <!-- ============================================= -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- ============================================= -->
+    <!--  SCRIPTS                                      -->
+    <!-- ============================================= -->
+    <script src="/js/script.js" defer></script>
+</body>
+</html>
