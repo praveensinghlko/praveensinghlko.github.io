@@ -60,47 +60,36 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // =============================================
-    //  2. STATS COUNTER ANIMATION
-    // =============================================
-    function animateCounters() {
-        const counters = document.querySelectorAll('.stat-number');
-        
-        counters.forEach(counter => {
-            const target = parseInt(counter.getAttribute('data-target')) || 0;
-            const suffix = counter.getAttribute('data-suffix') || '';
-            const duration = 2000; // 2 seconds
-            const steps = 60;
-            const increment = target / steps;
-            let current = 0;
-            
-            const timer = setInterval(() => {
-                current += increment;
-                if (current >= target) {
-                    counter.textContent = target + suffix;
-                    counter.classList.add('animated');
-                    clearInterval(timer);
-                } else {
-                    counter.textContent = Math.floor(current) + suffix;
-                }
-            }, duration / steps);
-        });
-    }
+// =============================================
+//  STATS COUNTER - SIMPLE WORKING VERSION
+// =============================================
+function startCounter() {
+    const counters = [
+        { element: document.querySelectorAll('.stat strong')[0], target: 2, suffix: '+' },
+        { element: document.querySelectorAll('.stat strong')[1], target: 100, suffix: '+' },
+        { element: document.querySelectorAll('.stat strong')[2], target: 24, suffix: 'hr' }
+    ];
 
-    // Run counter animation when hero section is visible
-    const heroStats = document.querySelector('.hero-stats');
-    if (heroStats) {
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    animateCounters();
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.5 });
+    counters.forEach(counter => {
+        if (!counter.element) return;
         
-        observer.observe(heroStats);
-    }
+        let current = 0;
+        const increment = counter.target / 50;
+        
+        const timer = setInterval(() => {
+            current += increment;
+            if (current >= counter.target) {
+                counter.element.textContent = counter.target + counter.suffix;
+                clearInterval(timer);
+            } else {
+                counter.element.textContent = Math.floor(current) + counter.suffix;
+            }
+        }, 40);
+    });
+}
+
+// Start counter after 500ms
+setTimeout(startCounter, 500);
 
     // =============================================
     //  3. LOADER HIDE
