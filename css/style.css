@@ -1627,3 +1627,100 @@ body,
                 border-color 0.3s ease, 
                 color 0.3s ease;
 }
+
+
+/* ===================================
+   STATS COUNTER ANIMATION
+   =================================== */
+.stat-number {
+    display: block;
+    font-size: 28px;
+    color: var(--primary);
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.stat-number.animated {
+    animation: countPulse 0.3s ease;
+}
+
+@keyframes countPulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+/* ===================================
+   VIDEO PLAY OVERLAY - ALWAYS VISIBLE UNTIL CLICKED
+   =================================== */
+.video-play {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    opacity: 1;
+    pointer-events: all;
+}
+
+.video-box.playing .video-play {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Don't hide on hover - only on click */
+.video-box:hover .video-play {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.video-box.playing:hover .video-play {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* ===================================
+   REEL PLAY OVERLAY - ALWAYS VISIBLE UNTIL CLICKED
+   =================================== */
+.reel-play {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    opacity: 1;
+    pointer-events: all;
+}
+
+.reel-card.active .reel-play,
+.reel-video.playing .reel-play {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Don't hide on hover - only on click */
+.reel-card:hover .reel-play {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.reel-card.active:hover .reel-play {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Playing indicator only shows when active */
+.reel-playing {
+    display: none;
+}
+
+.reel-card.active .reel-playing {
+    display: flex;
+}
