@@ -5,8 +5,5 @@ Allow: /
 # Sitemap location
 Sitemap: https://praveensingh.pro/sitemap.xml
 
-# Disallow maintenance page if you want
+# Disallow maintenance page
 Disallow: /maintenance.html
-
-# Crawl delay (optional)
-Crawl-delay: 1
