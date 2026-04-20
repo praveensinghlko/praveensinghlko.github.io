@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Praveen Singh | Portfolio Updating</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="Praveen Singh – Video editor portfolio is currently being updated."
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    :root {
+      --bg: #020617;
+      --card-bg: rgba(15, 23, 42, 0.96);
+      --accent: #22d3ee;
+      --accent-soft: rgba(34, 211, 238, 0.1);
+      --accent-strong: #38bdf8;
+      --text: #e5e7eb;
+      --text-muted: #9ca3af;
+      --border: rgba(148, 163, 184, 0.6);
+      --radius-lg: 18px;
+      --radius-pill: 999px;
+      --shadow-soft: 0 22px 60px rgba(15, 23, 42, 0.95);
+      --font-sans: "Space Grotesk", system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html,
+    body {
+      height: 100%;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background:
+        radial-gradient(circle at 0 0, rgba(56, 189, 248, 0.22), transparent 55%),
+        radial-gradient(circle at 100% 100%, rgba(129, 140, 248, 0.3), transparent 55%),
+        #020617;
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+    }
+
+    .wrapper {
+      max-width: 720px;
+      width: 100%;
+      position: relative;
+    }
+
+    .glow-orbit {
+      position: absolute;
+      inset: -40px;
+      border-radius: 30px;
+      background:
+        radial-gradient(circle at 0 0, rgba(34, 211, 238, 0.22), transparent 60%),
+        radial-gradient(circle at 100% 100%, rgba(56, 189, 248, 0.22), transparent 60%);
+      opacity: 0.7;
+      filter: blur(24px);
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .card {
+      position: relative;
+      z-index: 1;
+      border-radius: 24px;
+      border: 1px solid var(--border);
+      background: radial-gradient(circle at 0 0, rgba(30, 64, 175, 0.4), transparent 55%),
+        radial-gradient(circle at 100% 100%, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 1)),
+        var(--card-bg);
+      box-shadow: var(--shadow-soft);
+      padding: 1.6rem 1.8rem 1.8rem;
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+      gap: 2rem;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    @media (max-width: 720px) {
+      .card {
+        grid-template-columns: minmax(0, 1fr);
+        padding: 1.4rem 1.3rem 1.6rem;
+      }
+    }
+
+    .badge-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.25rem 0.8rem;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      background: rgba(15, 23, 42, 0.9);
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--text-muted);
+    }
+
+    .dot-live {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: #22c55e;
+      box-shadow: 0 0 12px rgba(34, 197, 94, 0.8);
+      animation: pulse 1.6s infinite;
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+        opacity: 0.9;
+      }
+      50% {
+        transform: scale(1.4);
+        opacity: 0.3;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 0.9;
+      }
+    }
+
+    .eyebrow {
+      font-size: 0.78rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent-strong);
+      margin-bottom: 0.75rem;
+    }
+
+    h1 {
+      font-size: clamp(1.9rem, 3vw, 2.4rem);
+      line-height: 1.2;
+      margin-bottom: 0.6rem;
+    }
+
+    .accent {
+      color: var(--accent-strong);
+    }
+
+    .subtitle {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      margin-bottom: 1.4rem;
+      max-width: 30rem;
+    }
+
+    .progress {
+      margin-bottom: 1.4rem;
+    }
+
+    .progress-label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-bottom: 0.25rem;
+    }
+
+    .progress-bar {
+      position: relative;
+      height: 4px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.85);
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, var(--accent), var(--accent-strong));
+      transform-origin: left;
+      animation: loading 2.6s infinite;
+    }
+
+    @keyframes loading {
+      0% {
+        transform: scaleX(0.2);
+        opacity: 0.5;
+      }
+      50% {
+        transform: scaleX(0.8);
+        opacity: 1;
+      }
+      100% {
+        transform: scaleX(0.95);
+        opacity: 0.7;
+      }
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .btn {
+      border-radius: var(--radius-pill);
+      font-size: 0.9rem;
+      font-weight: 500;
+      padding: 0.65rem 1.35rem;
+      border: 1px solid transparent;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      transition: transform 0.16s ease-out, box-shadow 0.16s ease-out,
+        background 0.16s ease-out, border-color 0.16s ease-out,
+        color 0.16s ease-out;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+      color: #020617;
+      box-shadow: 0 14px 32px rgba(34, 211, 238, 0.45);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 18px 44px rgba(34, 211, 238, 0.6);
+    }
+
+    .btn-ghost {
+      background: transparent;
+      border-color: rgba(148, 163, 184, 0.7);
+      color: var(--text);
+    }
+
+    .btn-ghost:hover {
+      background: rgba(15, 23, 42, 0.9);
+    }
+
+    .meta {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.9rem;
+      margin-top: 0.4rem;
+    }
+
+    .meta span {
+      opacity: 0.9;
+    }
+
+    .meta-strong {
+      color: var(--accent-strong);
+      font-weight: 500;
+    }
+
+    .right {
+      justify-self: stretch;
+      border-radius: 16px;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      background: rgba(15, 23, 42, 0.9);
+      padding: 1rem 1.1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+    }
+
+    @media (max-width: 720px) {
+      .right {
+        order: -1;
+      }
+    }
+
+    .right-title {
+      font-size: 0.86rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--text-muted);
+    }
+
+    .list {
+      list-style: none;
+      font-size: 0.86rem;
+      color: var(--text-muted);
+      margin-top: 0.4rem;
+    }
+
+    .list li {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .bullet {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: var(--accent-strong);
+      box-shadow: 0 0 8px rgba(34, 211, 238, 0.7);
+    }
+
+    .contact-block {
+      border-top: 1px solid rgba(148, 163, 184, 0.5);
+      padding-top: 0.7rem;
+      margin-top: 0.6rem;
+      font-size: 0.8rem;
+    }
+
+    .contact-row {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+      margin-top: 0.3rem;
+    }
+
+    .label {
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-size: 0.7rem;
+      color: var(--text-muted);
+    }
+
+    .value {
+      font-weight: 500;
+      font-size: 0.86rem;
+      word-break: break-all;
+    }
+
+    .value a {
+      color: inherit;
+    }
+
+    .value a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-note {
+      text-align: center;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-top: 0.8rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="glow-orbit"></div>
+
+    <main class="card">
+      <section>
+        <div class="badge-row">
+          <span class="pill">
+            <span class="dot-live"></span>
+            In the edit
+          </span>
+          <span class="pill" style="text-transform:none; letter-spacing:0;">
+            Praveen Singh · Video Editor
+          </span>
+        </div>
+
+        <p class="eyebrow">Portfolio maintenance</p>
+        <h1>
+          New 2025 portfolio is
+          <span class="accent">on the way</span>.
+        </h1>
+        <p class="subtitle">
+          I’m updating this website to better showcase my latest work.
+          The full portfolio will be live shortly.
+        </p>
+
+        <div class="progress">
+          <div class="progress-label">
+            <span>Update in progress</span>
+            <span>Almost there</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill"></div>
+          </div>
+        </div>
+
+        <div class="actions">
+          <a
+            class="btn btn-primary"
+            href="mailto:praveensinghaws@gmail.com?subject=Video%20Editing%20Project"
+          >
+            Email me your project
+          </a>
+          <a
+            class="btn btn-ghost"
+            href="https://t.me/praveensinghaws"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Chat on Telegram
+          </a>
+        </div>
+
+        <div class="meta">
+          <span>Based in <span class="meta-strong">India</span></span>
+          <span>Editing in <span class="meta-strong">DaVinci Resolve</span></span>
+        </div>
+      </section>
+
+      <aside class="right">
+        <div>
+          <p class="right-title">Coming soon</p>
+          <ul class="list">
+            <li>
+              <span class="bullet"></span>
+              <span>Updated 2025 portfolio & showreel.</span>
+            </li>
+            <li>
+              <span class="bullet"></span>
+              <span>Work for brands, creators & agencies.</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="contact-block">
+          <div class="contact-row">
+            <span class="label">Email</span>
+            <span class="value">
+              <a href="mailto:praveensinghaws@gmail.com">
+                praveensinghaws@gmail.com
+              </a>
+            </span>
+          </div>
+
+          <div class="contact-row">
+            <span class="label">Telegram</span>
+            <span class="value">
+              <a
+                href="https://t.me/praveensinghaws"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                @praveensinghaws
+              </a>
+            </span>
+          </div>
+        </div>
+      </aside>
+    </main>
+
+    <p class="footer-note">
+      This site is temporarily in maintenance while the new 2025 portfolio is being prepared.
+    </p>
+  </div>
+</body>
+</html>
