@@ -1,9 +1,5 @@
-# Allow all search engines
 User-agent: *
 Allow: /
-
-# Sitemap location
-Sitemap: https://praveensingh.pro/sitemap.xml
-
-# Disallow maintenance page
 Disallow: /maintenance.html
+
+Sitemap: https://praveensinghlko.github.io/sitemap.xml

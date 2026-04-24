@@ -1,368 +1,145 @@
-/**
- * =============================================
- *  Praveen Singh - Portfolio Script
- *  FINAL FIXED VERSION - All Issues Resolved
- *  - Stats Counter Animation
- *  - Click to Play (not hover)
- *  - Default Light Theme
- * =============================================
- */
+(function(){
+"use strict";
 
-document.addEventListener('DOMContentLoaded', function () {
+/* ═══ Loader ═══ */
+var ld=document.getElementById("loader"),
+    fl=document.getElementById("loaderFill"),w=0;
+document.body.style.overflow="hidden";
+var lt=setInterval(function(){
+    w+=Math.random()*20+5;
+    if(w>=100){w=100;clearInterval(lt);
+    setTimeout(function(){ld.classList.add("out");document.body.style.overflow=""},200)}
+    fl.style.width=w+"%";
+},80);
 
-    // =============================================
-    //  1. FORCE LIGHT THEME BY DEFAULT
-    // =============================================
-    const themeToggle = document.getElementById('themeToggle');
-    const themeIcon = document.getElementById('themeIcon');
-    const html = document.documentElement;
+/* ═══ Header ═══ */
+var hd=document.getElementById("header");
+window.addEventListener("scroll",function(){
+    hd.classList.toggle("fixed",scrollY>30);
+},{passive:true});
 
-    // Always clear any saved theme and set light
-    function initTheme() {
-        // Force light theme on every load
-        const savedTheme = localStorage.getItem('theme');
-        
-        // Only use dark if explicitly saved as dark
-        if (savedTheme === 'dark') {
-            html.setAttribute('data-theme', 'dark');
-            updateThemeIcon('dark');
-        } else {
-            // Default to light - always
-            html.setAttribute('data-theme', 'light');
-            localStorage.setItem('theme', 'light');
-            updateThemeIcon('light');
+/* ═══ Mobile menu ═══ */
+var bg=document.getElementById("burger"),nv=document.getElementById("nav");
+bg.addEventListener("click",function(){
+    bg.classList.toggle("open");nv.classList.toggle("open");
+});
+nv.querySelectorAll(".nav-link").forEach(function(l){
+    l.addEventListener("click",function(){bg.classList.remove("open");nv.classList.remove("open")});
+});
+
+/* ═══ Active nav on scroll ═══ */
+var secs=document.querySelectorAll("section[id]"),
+    links=document.querySelectorAll(".nav-link");
+window.addEventListener("scroll",function(){
+    var y=scrollY+100;
+    secs.forEach(function(s){
+        if(y>=s.offsetTop&&y<s.offsetTop+s.offsetHeight){
+            links.forEach(function(l){l.classList.toggle("active",l.getAttribute("data-sec")===s.id)});
         }
-    }
+    });
+},{passive:true});
 
-    function updateThemeIcon(theme) {
-        if (themeIcon) {
-            themeIcon.className = 'fas';
-            if (theme === 'dark') {
-                themeIcon.classList.add('fa-sun');
-            } else {
-                themeIcon.classList.add('fa-moon');
-            }
+/* ═══ Counter ═══ */
+var nums=document.querySelectorAll("[data-to]"),counted=false;
+function countUp(){
+    if(counted)return;
+    nums.forEach(function(n){
+        if(n.getBoundingClientRect().top<innerHeight*.85){
+            counted=true;
+            var to=parseInt(n.getAttribute("data-to")),v=0,inc=to/45;
+            var t=setInterval(function(){
+                v+=inc;
+                if(v>=to){n.textContent=to;clearInterval(t)}
+                else n.textContent=Math.floor(v);
+            },30);
         }
-    }
+    });
+}
+addEventListener("scroll",countUp,{passive:true});countUp();
 
-    // Initialize theme
-    initTheme();
+/* ═══ Showreel ═══ */
+var rf=document.getElementById("reelIframe"),
+    rc=document.getElementById("reelCover"),
+    rb=document.getElementById("reelBtn"),
+    vb=document.getElementById("volBtn"),
+    vi=document.getElementById("volIcon"),
+    muted=true;
 
-    // Toggle theme on button click
-    if (themeToggle) {
-        themeToggle.addEventListener('click', () => {
-            const currentTheme = html.getAttribute('data-theme') || 'light';
-            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-            
-            html.setAttribute('data-theme', newTheme);
-            localStorage.setItem('theme', newTheme);
-            updateThemeIcon(newTheme);
-        });
-    }
-
-// =============================================
-//  STATS COUNTER - SIMPLE WORKING VERSION
-// =============================================
-function startCounter() {
-    const counters = [
-        { element: document.querySelectorAll('.stat strong')[0], target: 2, suffix: '+' },
-        { element: document.querySelectorAll('.stat strong')[1], target: 100, suffix: '+' },
-        { element: document.querySelectorAll('.stat strong')[2], target: 24, suffix: 'hr' }
-    ];
-
-    counters.forEach(counter => {
-        if (!counter.element) return;
-        
-        let current = 0;
-        const increment = counter.target / 50;
-        
-        const timer = setInterval(() => {
-            current += increment;
-            if (current >= counter.target) {
-                counter.element.textContent = counter.target + counter.suffix;
-                clearInterval(timer);
-            } else {
-                counter.element.textContent = Math.floor(current) + counter.suffix;
-            }
-        }, 40);
+if(rb){
+    rb.addEventListener("click",function(){
+        rf.src=rf.src.replace("muted=1","muted=0").replace("background=1","background=0");
+        rc.classList.add("gone");
+        vi.className="fas fa-volume-up";
+        muted=false;
+    });
+}
+if(vb){
+    vb.addEventListener("click",function(){
+        if(muted){rb.click();return}
+        if(vi.classList.contains("fa-volume-up")){
+            rf.src=rf.src.replace("muted=0","muted=1");
+            vi.className="fas fa-volume-mute";muted=true;
+        }else{
+            rf.src=rf.src.replace("muted=1","muted=0");
+            vi.className="fas fa-volume-up";muted=false;
+        }
     });
 }
 
-// Start counter after 500ms
-setTimeout(startCounter, 500);
-
-    // =============================================
-    //  3. LOADER HIDE
-    // =============================================
-    const loader = document.getElementById('loader');
-    if (loader) {
-        loader.classList.add('hide');
-        setTimeout(() => loader.remove(), 500);
-    }
-
-    // =============================================
-    //  4. MOBILE MENU TOGGLE
-    // =============================================
-    const menuBtn = document.getElementById('menuBtn');
-    const nav = document.getElementById('nav');
-
-    if (menuBtn && nav) {
-        menuBtn.addEventListener('click', () => {
-            nav.classList.toggle('active');
-            menuBtn.classList.toggle('active');
-            menuBtn.setAttribute('aria-expanded', nav.classList.contains('active'));
-        });
-
-        // Close menu when clicking nav links
-        document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', () => {
-                nav.classList.remove('active');
-                menuBtn.classList.remove('active');
-            });
-        });
-
-        // Close menu when clicking outside
-        document.addEventListener('click', (e) => {
-            if (!e.target.closest('.header') && nav.classList.contains('active')) {
-                nav.classList.remove('active');
-                menuBtn.classList.remove('active');
-            }
-        });
-    }
-
-    // =============================================
-    //  5. HEADER SCROLL EFFECT
-    // =============================================
-    window.addEventListener('scroll', () => {
-        const header = document.getElementById('header');
-        if (header) {
-            header.classList.toggle('scrolled', window.scrollY > 50);
-        }
+/* ═══ Work cards ═══ */
+document.querySelectorAll(".work-item").forEach(function(card){
+    var ifr=card.querySelector("iframe"),
+        ov=card.querySelector(".work-ov"),
+        pl=card.querySelector(".work-playing"),
+        btn=card.querySelector(".work-play");
+    if(!btn)return;
+    btn.addEventListener("click",function(){
+        var id=card.getAttribute("data-vid");
+        ifr.src="https://player.vimeo.com/video/"+id+"?autoplay=1&loop=1&title=0&byline=0&portrait=0";
+        ov.classList.add("off");
+        pl.classList.add("on");
     });
-
-    // =============================================
-    //  6. SMOOTH SCROLL FOR NAVIGATION
-    // =============================================
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
-        });
-    });
-
-    // =============================================
-    //  7. SHOWREEL - CLICK TO PLAY (NOT HOVER)
-    // =============================================
-    const showreelBox = document.getElementById('showreelBox');
-    const showreelFrame = document.getElementById('showreelFrame');
-    const showreelPlay = document.getElementById('showreelPlay');
-    const showreelSound = document.getElementById('showreelSound');
-
-    if (showreelBox && showreelFrame) {
-        
-        const getBaseUrl = (src) => {
-            return src.split('?')[0];
-        };
-
-        const unmuteShowreel = () => {
-            const baseUrl = getBaseUrl(showreelFrame.src);
-            showreelFrame.src = baseUrl + '?background=1&muted=0&loop=1&autoplay=1&title=0&byline=0&portrait=0';
-            showreelBox.classList.add('playing');
-            if (showreelSound) {
-                showreelSound.innerHTML = '<i class="fas fa-volume-up"></i>';
-            }
-        };
-
-        const muteShowreel = () => {
-            const baseUrl = getBaseUrl(showreelFrame.src);
-            showreelFrame.src = baseUrl + '?background=1&muted=1&loop=1&autoplay=1&title=0&byline=0&portrait=0';
-            showreelBox.classList.remove('playing');
-            if (showreelSound) {
-                showreelSound.innerHTML = '<i class="fas fa-volume-mute"></i>';
-            }
-        };
-
-        // Click to toggle play/mute
-        showreelBox.addEventListener('click', (e) => {
-            if (e.target.closest('.video-sound')) return;
-            
-            if (showreelBox.classList.contains('playing')) {
-                muteShowreel();
-            } else {
-                unmuteShowreel();
-            }
-        });
-
-        // Sound button
-        if (showreelSound) {
-            showreelSound.addEventListener('click', (e) => {
-                e.stopPropagation();
-                if (showreelBox.classList.contains('playing')) {
-                    muteShowreel();
-                } else {
-                    unmuteShowreel();
-                }
-            });
-        }
-    }
-
-    // =============================================
-    //  8. REELS - CLICK TO PLAY (NOT HOVER)
-    // =============================================
-    let currentPlayingReel = null;
-
-    document.querySelectorAll('.reel-card').forEach(card => {
-        const iframe = card.querySelector('iframe');
-        const video = card.querySelector('.reel-video');
-
-        if (!iframe) return;
-
-        const getBaseUrl = (src) => {
-            return src.split('?')[0];
-        };
-
-        const playReel = () => {
-            // Stop other reels first
-            if (currentPlayingReel && currentPlayingReel !== card) {
-                stopReel(currentPlayingReel);
-            }
-
-            const baseUrl = getBaseUrl(iframe.src);
-            iframe.src = baseUrl + '?background=1&muted=0&loop=1&autoplay=1&title=0&byline=0&portrait=0';
-            card.classList.add('active');
-            video.classList.add('playing');
-            currentPlayingReel = card;
-        };
-
-        const stopReel = (reelCard) => {
-            const reelIframe = reelCard.querySelector('iframe');
-            const reelVideo = reelCard.querySelector('.reel-video');
-
-            const baseUrl = getBaseUrl(reelIframe.src);
-            reelIframe.src = baseUrl + '?background=1&muted=1&loop=1&autoplay=1&title=0&byline=0&portrait=0';
-            reelCard.classList.remove('active');
-            reelVideo.classList.remove('playing');
-        };
-
-        // Click to toggle play/mute
-        card.addEventListener('click', () => {
-            if (card.classList.contains('active')) {
-                stopReel(card);
-                currentPlayingReel = null;
-            } else {
-                playReel();
-            }
-        });
-    });
-
-    // =============================================
-    //  9. MUTE ALL VIDEOS WHEN CLICKING OUTSIDE
-    // =============================================
-    document.addEventListener('click', (e) => {
-        const clickedVideo = e.target.closest('.reel-card') || e.target.closest('#showreelBox');
-
-        if (!clickedVideo) {
-            // Mute all reels
-            document.querySelectorAll('.reel-card.active').forEach(card => {
-                const iframe = card.querySelector('iframe');
-                const video = card.querySelector('.reel-video');
-                const baseUrl = iframe.src.split('?')[0];
-                iframe.src = baseUrl + '?background=1&muted=1&loop=1&autoplay=1&title=0&byline=0&portrait=0';
-                card.classList.remove('active');
-                video.classList.remove('playing');
-            });
-            currentPlayingReel = null;
-
-            // Mute showreel
-            if (showreelBox && showreelBox.classList.contains('playing')) {
-                const baseUrl = showreelFrame.src.split('?')[0];
-                showreelFrame.src = baseUrl + '?background=1&muted=1&loop=1&autoplay=1&title=0&byline=0&portrait=0';
-                showreelBox.classList.remove('playing');
-                if (showreelSound) {
-                    showreelSound.innerHTML = '<i class="fas fa-volume-mute"></i>';
-                }
-            }
-        }
-    });
-
-    // =============================================
-    //  10. ACTIVE NAV LINK ON SCROLL
-    // =============================================
-    const sections = document.querySelectorAll('section[id]');
-    const navLinks = document.querySelectorAll('.nav-link');
-
-    window.addEventListener('scroll', () => {
-        let current = '';
-
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop - 100;
-            const sectionHeight = section.clientHeight;
-
-            if (window.pageYOffset >= sectionTop && window.pageYOffset < sectionTop + sectionHeight) {
-                current = section.getAttribute('id');
-            }
-        });
-
-        navLinks.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href').slice(1) === current) {
-                link.classList.add('active');
-            }
-        });
-    });
-
-    // =============================================
-    //  11. BACK TO TOP BUTTON
-    // =============================================
-    const backToTop = document.getElementById('backToTop');
-
-    window.addEventListener('scroll', () => {
-        if (backToTop) {
-            if (window.pageYOffset > 300) {
-                backToTop.classList.add('show');
-            } else {
-                backToTop.classList.remove('show');
-            }
-        }
-    });
-
-    if (backToTop) {
-        backToTop.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-    }
-
-    // =============================================
-    //  12. DYNAMIC YEAR IN FOOTER
-    // =============================================
-    const yearSpan = document.getElementById('currentYear');
-    if (yearSpan) {
-        yearSpan.textContent = new Date().getFullYear();
-    }
-
-    // =============================================
-    //  13. ESCAPE KEY TO CLOSE MENU
-    // =============================================
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && nav && nav.classList.contains('active')) {
-            nav.classList.remove('active');
-            menuBtn.classList.remove('active');
-        }
-    });
-
-    // =============================================
-    //  14. DEBUG LOG
-    // =============================================
-    console.log('✅ Praveen Singh Portfolio Loaded');
-    console.log('🎨 Theme:', html.getAttribute('data-theme'));
-
 });
+
+/* ═══ FAQ ═══ */
+document.querySelectorAll(".faq-item").forEach(function(item){
+    item.querySelector(".faq-q").addEventListener("click",function(){
+        var open=item.classList.contains("open");
+        document.querySelectorAll(".faq-item").forEach(function(i){i.classList.remove("open")});
+        if(!open)item.classList.add("open");
+    });
+});
+
+/* ═══ Contact form ═══ */
+var form=document.getElementById("contactForm");
+if(form){
+    form.addEventListener("submit",function(e){
+        e.preventDefault();
+        var d=Object.fromEntries(new FormData(form));
+        var s=encodeURIComponent("Video Editing Inquiry — "+d.service);
+        var b=encodeURIComponent("Name: "+d.name+"\nEmail: "+d.email+"\nService: "+d.service+"\n\n"+d.message);
+        window.location.href="mailto:praveensinghaws@gmail.com?subject="+s+"&body="+b;
+        var btn=form.querySelector("button[type=submit]"),orig=btn.innerHTML;
+        btn.innerHTML='<i class="fas fa-check"></i> Sent!';btn.style.background="#22c55e";
+        setTimeout(function(){btn.innerHTML=orig;btn.style.background="";form.reset()},2500);
+    });
+}
+
+/* ═══ Back to top ═══ */
+var tt=document.getElementById("totop");
+addEventListener("scroll",function(){tt.classList.toggle("show",scrollY>400)},{passive:true});
+tt.addEventListener("click",function(){scrollTo({top:0,behavior:"smooth"})});
+
+/* ═══ Reveal ═══ */
+var obs=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+        if(e.isIntersecting){e.target.classList.add("vis");obs.unobserve(e.target)}
+    });
+},{threshold:.1,rootMargin:"0px 0px -40px 0px"});
+
+document.querySelectorAll(".sec-top, .svc, .step, .review, .faq-item, .about-wrap, .contact-wrap, .work-item, .reel-player").forEach(function(el){
+    el.setAttribute("data-r","");
+    obs.observe(el);
+});
+
+})();
