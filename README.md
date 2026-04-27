@@ -1,202 +1,329 @@
 <div align="center">
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:0b0b0d,35:e8430a,100:ff6b35&height=240&section=header&text=Praveen%20Singh&fontSize=50&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Video%20Editor%20%E2%80%A2%20Developer%20%E2%80%A2%20Creator&descAlignY=62&descSize=18" />
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:0b0b0d,35:e8430a,100:ff6b35&height=230&section=header&text=Praveen%20Singh%20Portfolio&fontSize=44&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Cinematic%20personal%20brand%20website%20for%20a%20professional%20video%20editor&descAlignY=60&descSize=16" />
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Inter&weight=600&size=21&pause=1100&color=E8430A&center=true&vCenter=true&width=1000&lines=I+don%E2%80%99t+just+edit+videos+%E2%80%94+I+craft+stories;DaVinci+Resolve+Expert+%7C+100%2B+Projects+Delivered;Building+tools+for+creators%2C+editors+and+real+workflows;Website+design%2C+creative+automation+and+product+building)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Inter&weight=600&size=20&pause=1100&color=E8430A&center=true&vCenter=true&width=980&lines=Dark%20cinematic%20portfolio%20website;Built%20for%20a%20professional%20video%20editor;Wedding%20films%2C%20reels%2C%20documentary%20and%20brand%20presentation;Responsive%20design%20with%20SEO%20and%20structured%20data)](https://git.io/typing-svg)
 
-<p>
-  <a href="https://praveensingh.pro/" target="_blank">
-    <img src="https://img.shields.io/badge/Website-praveensingh.pro-e8430a?style=for-the-badge&logo=googlechrome&logoColor=white" />
-  </a>
-  <a href="mailto:praveensinghaws@gmail.com">
-    <img src="https://img.shields.io/badge/Email-111114?style=for-the-badge&logo=gmail&logoColor=ff6b35" />
-  </a>
-  <a href="https://instagram.com/praveensinghaws" target="_blank">
-    <img src="https://img.shields.io/badge/Instagram-111114?style=for-the-badge&logo=instagram&logoColor=ff6b35" />
-  </a>
-  <a href="https://t.me/praveensinghaws" target="_blank">
-    <img src="https://img.shields.io/badge/Telegram-111114?style=for-the-badge&logo=telegram&logoColor=ff6b35" />
-  </a>
-  <a href="https://youtube.com/@praveensinghaws" target="_blank">
-    <img src="https://img.shields.io/badge/YouTube-111114?style=for-the-badge&logo=youtube&logoColor=ff6b35" />
-  </a>
-</p>
+# 🎬 Praveen Singh — Video Editor Portfolio Website
 
-</div>
-
----
-
-## 👋 About Me
-
-Hi, I'm **Praveen Singh** — a **video editor**, **developer**, and **creative builder** from **Lucknow, India**.
-
-I work at the intersection of **storytelling** and **tools**:
-
-- 🎬 editing wedding films, reels, documentaries, and branded videos  
-- 🛠️ building utilities for **DaVinci Resolve** and creator workflows  
-- 🌐 designing clean, premium websites for personal brands and clients  
-- ⚡ creating practical products that save time and improve output  
-
-I use **DaVinci Resolve**, **Lua**, **Python**, **HTML/CSS/JS**, and a product-first mindset to turn ideas into polished results.
-
----
-
-## 📌 Quick Snapshot
-
-<div align="center">
-
-| Projects | Experience | Delivery | Focus |
-|---|---:|---:|---|
-| 100+ | 2+ Years | 24hr | Editing + Tools + Web |
-
-</div>
-
----
-
-## 🚀 Featured Work
-
-<table>
-  <tr>
-    <td width="50%" valign="top">
-      <h3>📥 Resolve Social Downloader</h3>
-      <p>A DaVinci Resolve utility that downloads videos from social platforms and imports them directly into the Media Pool. Built for macOS and Windows.</p>
-      <p>
-        <a href="https://github.com/praveensinghlko/Resolve-Social-Downloader">🔗 View Repository</a>
-      </p>
-      <p>
-        <img src="https://img.shields.io/badge/Lua-2C2D72?style=flat-square&logo=lua&logoColor=white" />
-        <img src="https://img.shields.io/badge/yt--dlp-e8430a?style=flat-square" />
-        <img src="https://img.shields.io/badge/ffmpeg-16a34a?style=flat-square" />
-        <img src="https://img.shields.io/badge/macOS%20%2B%20Windows-111114?style=flat-square" />
-      </p>
-    </td>
-    <td width="50%" valign="top">
-      <h3>🎬 SnapVid Downloader</h3>
-      <p>A clean downloader project focused on a fast, simple, desktop-friendly media workflow with a polished user experience.</p>
-      <p>
-        <a href="https://github.com/praveensinghlko/SnapVid-Downloader">🔗 View Repository</a>
-      </p>
-      <p>
-        <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" />
-        <img src="https://img.shields.io/badge/macOS-111114?style=flat-square&logo=apple&logoColor=white" />
-      </p>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <h3>🌐 Personal Website</h3>
-      <p>My portfolio website with a dark cinematic theme, personal branding, services, reviews, and contact flow.</p>
-      <p>
-        <a href="https://praveensingh.pro/">🌍 Visit Website</a><br/>
-        <a href="https://github.com/praveensinghlko/praveensinghlko.github.io">📁 Repository</a>
-      </p>
-      <p>
-        <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" />
-        <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white" />
-        <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" />
-      </p>
-    </td>
-    <td width="50%" valign="top">
-      <h3>📸 Pawan Studio</h3>
-      <p>A wedding photography website I designed and developed for a client, featuring gallery, quotations, and service presentation.</p>
-      <p>
-        <a href="https://pawanstudio.shop/">🌍 Visit Live Website</a>
-      </p>
-      <p>
-        <img src="https://img.shields.io/badge/Client%20Work-e8430a?style=flat-square" />
-        <img src="https://img.shields.io/badge/HTML-CSS-JS-111114?style=flat-square" />
-      </p>
-    </td>
-  </tr>
-</table>
-
----
-
-## 🧰 Tech Stack
-
-### Video & Creative
-<p>
-  <img src="https://img.shields.io/badge/DaVinci%20Resolve-111114?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/ffmpeg-16a34a?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Color%20Grading-e8430a?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Storytelling-ff6b35?style=for-the-badge" />
-</p>
-
-### Development
-<p>
-  <img src="https://img.shields.io/badge/Lua-2C2D72?style=for-the-badge&logo=lua&logoColor=white" />
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
-  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" />
-  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" />
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />
-  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" />
-  <img src="https://img.shields.io/badge/GitHub-111114?style=for-the-badge&logo=github&logoColor=white" />
-</p>
-
----
-
-## 📊 GitHub Stats
-
-<div align="center">
-
-<img height="165" src="https://github-readme-stats.vercel.app/api?username=praveensinghlko&show_icons=true&hide_border=true&title_color=e8430a&icon_color=ff6b35&text_color=fafafa&bg_color=0b0b0d" />
-<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=praveensinghlko&layout=compact&hide_border=true&title_color=e8430a&text_color=fafafa&bg_color=0b0b0d" />
-
-</div>
-
-<div align="center">
-
-<img src="https://streak-stats.demolab.com?user=praveensinghlko&hide_border=true&ring=e8430a&fire=ff6b35&currStreakLabel=e8430a&background=0b0b0d&sideLabels=fafafa&dates=9a9ab0" />
-
-</div>
-
----
-
-## 📈 Activity Graph
-
-[![Praveen's GitHub Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=praveensinghlko&bg_color=0b0b0d&color=ff6b35&line=e8430a&point=ffffff&area=true&area_color=e8430a&hide_border=true)](https://github.com/praveensinghlko)
-
----
-
-## 🎯 What I’m Focused On
-
-- building practical tools for creators and editors  
-- improving **DaVinci Resolve** workflows  
-- shipping polished open-source utilities  
-- creating fast, premium, personal-brand websites  
-- combining **creative work + developer thinking**  
-
----
-
-## 💼 Services
-
-- Wedding teaser and highlight film editing  
-- Instagram reels and short-form video edits  
-- Documentary and branded video editing  
-- DaVinci Resolve scripts and workflow tools  
-- Website design and development for creators and businesses  
-
----
-
-## 🔗 Connect With Me
+**A premium personal portfolio website built for a professional video editor, focused on cinematic presentation, local SEO, and client conversion.**
 
 <p>
   <a href="https://praveensingh.pro/" target="_blank">
-    <img src="https://img.shields.io/badge/Portfolio-Visit%20Website-e8430a?style=for-the-badge&logo=googlechrome&logoColor=white" />
+    <img src="https://img.shields.io/badge/Live%20Website-praveensingh.pro-e8430a?style=for-the-badge&logo=googlechrome&logoColor=white" />
   </a>
-  <a href="mailto:praveensinghaws@gmail.com">
-    <img src="https://img.shields.io/badge/Email-praveensinghaws%40gmail.com-111114?style=for-the-badge&logo=gmail&logoColor=ff6b35" />
-  </a>
-  <a href="https://instagram.com/praveensinghaws" target="_blank">
-    <img src="https://img.shields.io/badge/Instagram-@praveensinghaws-111114?style=for-the-badge&logo=instagram&logoColor=ff6b35" />
-  </a>
+  <img src="https://img.shields.io/badge/Theme-Dark%20Cinematic-111114?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Responsive-Yes-ff6b35?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/SEO-Optimized-16a34a?style=for-the-badge" />
 </p>
+
+<p>
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" />
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white" />
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" />
+  <img src="https://img.shields.io/badge/Vimeo-1AB7EA?style=flat-square&logo=vimeo&logoColor=white" />
+  <img src="https://img.shields.io/badge/Schema-Markup-e8430a?style=flat-square" />
+  <img src="https://img.shields.io/badge/Local%20SEO-Lucknow-111114?style=flat-square" />
+</p>
+
+</div>
+
+---
+
+## ✨ Overview
+
+This repository contains the source code for **[praveensingh.pro](https://praveensingh.pro/)** — a personal portfolio website for **Praveen Singh**, a professional video editor based in **Lucknow, India**.
+
+The site is designed to present a strong personal brand with a **dark cinematic visual language**, while also functioning as a **high-conversion service website** for wedding films, reels, documentaries, and branded video editing work.
+
+It combines:
+
+- a premium editorial look
+- responsive modern layout
+- embedded showreel and portfolio content
+- trust-building sections like reviews and FAQ
+- local SEO and structured data
+- a clean contact funnel for leads
+
+---
+
+## 🎯 Project Goals
+
+- present a **premium personal brand**
+- showcase editing work in a cinematic way
+- attract **wedding**, **reel**, and **documentary** clients
+- support **local search visibility** for Lucknow-based queries
+- keep the site lightweight, elegant, and easy to maintain
+
+---
+
+## 🚀 Key Features
+
+- **Dark cinematic UI**
+- **Fully responsive layout**
+- **Showreel section with Vimeo integration**
+- **Portfolio work cards with embedded video previews**
+- **Services section for wedding films, reels, documentaries, and commercials**
+- **About section with brand positioning**
+- **Client review/testimonial section**
+- **Expandable FAQ section**
+- **Contact section with quick action links**
+- **Animated loader and scroll-based reveal effects**
+- **Sticky header with mobile navigation**
+- **Local SEO optimization**
+- **Open Graph and Twitter metadata**
+- **Schema.org structured data**
+- **Manifest, robots.txt, and sitemap support**
+
+---
+
+## 🎨 Design System
+
+The visual identity is based on a **premium cinematic theme**.
+
+### Core Palette
+
+| Role | Color |
+|---|---|
+| Primary Accent | `#e8430a` |
+| Secondary Accent | `#ff6b35` |
+| Background | `#0b0b0d` |
+| Surface | `#111114` |
+| Card Background | `#19191d` |
+| Main Text | `#fafafa` |
+| Muted Text | `#9a9ab0` |
+
+### Typography
+- **Inter** — UI, layout, body text
+- **Playfair Display** — premium cinematic headings
+
+### Design Direction
+- elegant
+- bold
+- editorial
+- high-contrast
+- conversion-focused
+
+---
+
+## 🧱 Sections Included
+
+The website currently includes:
+
+- **Loader**
+- **Sticky Header / Navigation**
+- **Hero Section**
+- **Showreel**
+- **Work / Portfolio**
+- **Services**
+- **Process**
+- **About**
+- **Reviews**
+- **FAQ**
+- **Contact**
+- **Footer**
+
+This structure is designed to take a visitor from **first impression → trust → proof → inquiry**.
+
+---
+
+## 🛠️ Tech Stack
+
+- **HTML5**
+- **CSS3**
+- **JavaScript**
+- **Font Awesome**
+- **Google Fonts**
+- **Vimeo embeds**
+- **Schema.org JSON-LD**
+- **Google Analytics**
+
+---
+
+## 📈 SEO & Structured Data
+
+This project includes strong SEO foundations.
+
+### SEO Features
+- descriptive page title and meta description
+- canonical URL
+- Open Graph metadata
+- Twitter card metadata
+- robots directives
+- sitemap support
+- semantic content structure
+
+### Structured Data Included
+- **Person**
+- **LocalBusiness**
+- **FAQPage**
+
+This helps improve discoverability for search terms related to:
+
+- video editor in Lucknow
+- wedding video editor
+- documentary editor
+- DaVinci Resolve editor
+- reel editor
+
+---
+
+## 📱 Responsive Experience
+
+The layout is optimized for:
+
+- desktop
+- tablet
+- mobile devices
+
+Responsive behavior includes:
+- mobile navigation drawer
+- adaptable grids
+- stacked content sections
+- hidden hero image on smaller screens where needed
+- touch-friendly portfolio flow
+
+---
+
+## 📂 Project Structure
+
+```text
+praveensinghlko.github.io/
+├── assets/
+│   ├── favicon.ico
+│   ├── logo.PNG
+│   ├── profile1.jpeg
+│   └── ...
+├── css/
+│   └── style.css
+├── js/
+│   └── script.js
+├── index.html
+├── maintenance.html
+├── manifest.json
+├── robots.txt
+├── sitemap.xml
+└── CNAME
+```
+
+---
+
+## 🖼️ Media & Content
+
+The website includes:
+- personal branding assets
+- profile imagery
+- embedded Vimeo showreel/work previews
+- optimized gallery content
+- service-focused copywriting
+- client-facing contact and conversion flow
+
+---
+
+## ⚙️ Local Development
+
+Clone the repository:
+
+```bash
+git clone https://github.com/praveensinghlko/praveensinghlko.github.io.git
+cd praveensinghlko.github.io
+```
+
+Open locally:
+
+```bash
+open index.html
+```
+
+Or use a local server:
+
+```bash
+python3 -m http.server
+```
+
+Then visit:
+
+```text
+http://localhost:8000
+```
+
+---
+
+## 🔧 Customization
+
+You can easily customize:
+
+- **brand colors** in `:root` inside `css/style.css`
+- **hero copy** in `index.html`
+- **services**
+- **reviews**
+- **FAQ**
+- **contact links**
+- **showreel / Vimeo embeds**
+- **SEO metadata**
+- **schema markup**
+- **location-specific content**
+
+This makes the project reusable for:
+- editors
+- creators
+- photographers
+- filmmakers
+- agencies
+- local service businesses
+
+---
+
+## 🌍 Live Website
+
+**[https://praveensingh.pro/](https://praveensingh.pro/)**
+
+---
+
+## 💡 Highlights
+
+What makes this project strong:
+
+- premium personal branding
+- clean codebase
+- no framework dependency
+- strong local SEO setup
+- elegant cinematic presentation
+- practical service-site structure
+- easy hosting on GitHub Pages / custom domain
+
+---
+
+## 🗺️ Future Improvements
+
+- [ ] dedicated project detail pages
+- [ ] blog or journal section
+- [ ] advanced contact form backend
+- [ ] performance image pipeline
+- [ ] multilingual support
+- [ ] richer analytics dashboard
+- [ ] CMS-like content editing workflow
+
+---
+
+## 📄 License
+
+This project is for personal portfolio use unless otherwise specified.
+
+---
+
+## 👨‍💻 Author
+
+**Praveen Singh**  
+Video Editor • Developer • Creator
+
+🌐 **[praveensingh.pro](https://praveensingh.pro/)**
 
 ---
 
 <div align="center">
 
-### ⭐ Thanks for visiting my profile
+### ⭐ Built with a cinematic mindset and a clean product approach
 
 <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:ff6b35,50:e8430a,100:0b0b0d&height=120&section=footer" />
 
