@@ -86,20 +86,7 @@ if(vb){
     });
 }
 
-/* ═══ Work cards ═══ */
-document.querySelectorAll(".work-item").forEach(function(card){
-    var ifr=card.querySelector("iframe"),
-        ov=card.querySelector(".work-ov"),
-        pl=card.querySelector(".work-playing"),
-        btn=card.querySelector(".work-play");
-    if(!btn)return;
-    btn.addEventListener("click",function(){
-        var id=card.getAttribute("data-vid");
-        ifr.src="https://player.vimeo.com/video/"+id+"?autoplay=1&loop=1&title=0&byline=0&portrait=0";
-        ov.classList.add("off");
-        pl.classList.add("on");
-    });
-});
+
 
 /* ═══ FAQ ═══ */
 document.querySelectorAll(".faq-item").forEach(function(item){
@@ -140,6 +127,38 @@ var obs=new IntersectionObserver(function(entries){
 document.querySelectorAll(".sec-top, .svc, .step, .review, .faq-item, .about-wrap, .contact-wrap, .work-item, .reel-player").forEach(function(el){
     el.setAttribute("data-r","");
     obs.observe(el);
+});
+
+/* ═══ Reels play ═══ */
+document.querySelectorAll(".reel").forEach(function(card){
+    var ifr=card.querySelector("iframe"),
+        ov=card.querySelector(".reel-ov"),
+        now=card.querySelector(".reel-now"),
+        btn=card.querySelector(".reel-play");
+    if(!btn)return;
+    btn.addEventListener("click",function(e){
+        e.stopPropagation();
+        var id=card.getAttribute("data-vid");
+        ifr.src="https://player.vimeo.com/video/"+id+"?autoplay=1&loop=1&title=0&byline=0&portrait=0";
+        ov.classList.add("off");
+        now.classList.add("on");
+    });
+});
+
+/* ═══ Films play ═══ */
+document.querySelectorAll(".film").forEach(function(card){
+    var ifr=card.querySelector("iframe"),
+        ov=card.querySelector(".film-ov"),
+        now=card.querySelector(".film-now"),
+        btn=card.querySelector(".film-play");
+    if(!btn)return;
+    btn.addEventListener("click",function(e){
+        e.stopPropagation();
+        var id=card.getAttribute("data-vid");
+        ifr.src="https://player.vimeo.com/video/"+id+"?autoplay=1&loop=1&title=0&byline=0&portrait=0";
+        ov.classList.add("off");
+        now.classList.add("on");
+    });
 });
 
 })();
