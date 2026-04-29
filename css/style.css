@@ -272,19 +272,20 @@ button{cursor:pointer;border:none;background:none;font:inherit;color:inherit}
 .reels-scroll::-webkit-scrollbar{display:none}
 .reels-track{display:flex;gap:14px;padding:4px 0}
 
-.reel{flex:0 0 200px;background:var(--bg2);border-radius:var(--r);overflow:hidden;border:1px solid var(--bdr);transition:.3s;cursor:pointer}
-.reel:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(0,0,0,.5);border-color:rgba(232,67,10,.2)}
+.reel{flex:0 0 200px;background:var(--bg2);border-radius:var(--r);overflow:hidden;border:1px solid var(--bdr);transition:all .4s var(--ease);cursor:pointer;position:relative}
+.reel:hover{transform:scale(1.06);box-shadow:0 20px 50px rgba(232,67,10,.25);border-color:var(--c);z-index:10}
 
 .reel-vid{position:relative;aspect-ratio:9/16;overflow:hidden;background:#000}
-.reel-vid iframe{position:absolute;inset:-8%;width:116%;height:116%;border:none;pointer-events:none;transition:transform .5s}
-.reel:hover .reel-vid iframe{transform:scale(1.03)}
+.reel-vid iframe{position:absolute;inset:-8%;width:116%;height:116%;border:none;pointer-events:none;transition:transform .6s var(--ease)}
+.reel:hover .reel-vid iframe{transform:scale(1.08)}
 
-.reel-ov{position:absolute;inset:0;background:rgba(0,0,0,.25);display:flex;align-items:center;justify-content:center;transition:opacity .3s}
+.reel-ov{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.5) 0%,transparent 30%,transparent 50%,rgba(0,0,0,.7) 100%);display:flex;align-items:center;justify-content:center;transition:all .3s}
+.reel:hover .reel-ov{background:linear-gradient(180deg,rgba(232,67,10,.15) 0%,transparent 30%,transparent 50%,rgba(0,0,0,.8) 100%)}
 .reel-ov.off{opacity:0;pointer-events:none}
 
-.reel-play{width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.9);color:#111;display:flex;align-items:center;justify-content:center;font-size:14px;border:none;cursor:pointer;padding-left:2px;opacity:0;transition:.2s;transform:scale(.8)}
-.reel:hover .reel-play{opacity:1;transform:scale(1)}
-.reel-play:hover{transform:scale(1.1)!important;background:#fff}
+.reel-play{width:48px;height:48px;border-radius:50%;background:var(--c);color:#fff;display:flex;align-items:center;justify-content:center;font-size:16px;border:none;cursor:pointer;padding-left:3px;opacity:0;transition:all .3s var(--ease);transform:scale(.7);box-shadow:0 0 0 0 rgba(232,67,10,0)}
+.reel:hover .reel-play{opacity:1;transform:scale(1);box-shadow:0 0 24px rgba(232,67,10,.4)}
+.reel-play:hover{transform:scale(1.15)!important;box-shadow:0 0 32px rgba(232,67,10,.6)!important}
 
 .reel-tag{position:absolute;top:10px;left:10px;padding:3px 9px;background:rgba(0,0,0,.55);backdrop-filter:blur(6px);border-radius:99px;font-size:9px;font-weight:700;color:#fff;text-transform:uppercase;letter-spacing:.5px}
 
@@ -340,11 +341,19 @@ button{cursor:pointer;border:none;background:none;font:inherit;color:inherit}
     .films-grid{grid-template-columns:1fr 1fr}
 }
 @media(max-width:768px){
-    .reel{flex:0 0 170px}
+    .reel{flex:0 0 160px}
+    .reel:hover{transform:scale(1.03)}
+    .reel-play{width:40px;height:40px;font-size:13px}
 }
 @media(max-width:560px){
     .films-grid{grid-template-columns:1fr}
-    .reel{flex:0 0 155px}
+    .reel{flex:0 0 140px}
+    .reel:hover{transform:scale(1.02)}
+    .reel-info{padding:8px 10px}
+    .reel-info h4{font-size:11px}
+    .reel-info p{font-size:9px}
+    .reel-tag{font-size:8px;padding:2px 7px}
+    .reel-play{width:36px;height:36px;font-size:12px}
 }
 
 
@@ -361,3 +370,36 @@ button{cursor:pointer;border:none;background:none;font:inherit;color:inherit}
 .film-info p{
     min-height: 34px;
 }
+
+/* Active reel highlight */
+.reel::before{
+    content:'';
+    position:absolute;
+    inset:-2px;
+    border-radius:calc(var(--r) + 2px);
+    background:var(--grad);
+    opacity:0;
+    transition:opacity .3s;
+    z-index:-1;
+}
+.reel:hover::before{
+    opacity:1;
+}
+
+/* Reel scroll smooth padding */
+.reels-scroll{
+    padding-top:8px;
+    padding-bottom:12px;
+}
+.reels-track{
+    padding:8px 4px;
+}
+
+
+.reel:hover{transform:scale(1.06);box-shadow:...;border-color:var(--c);z-index:10}
+.reel:hover .reel-vid iframe{transform:scale(1.08)}
+.reel:hover .reel-play{opacity:1;transform:scale(1);box-shadow:...}
+.reel:hover .reel-ov{background:linear-gradient(...)}
+.reel:hover::before{opacity:1}
+.reel:hover{transform:scale(1.03)}  ← mobile
+.reel:hover{transform:scale(1.02)}  ← small mobile
