@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /maintenance.html
 
-Sitemap: https://praveensinghlko.github.io/sitemap.xml
+Sitemap: https://praveensingh.pro/sitemap.xml
